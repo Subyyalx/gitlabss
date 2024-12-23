@@ -1,0 +1,15 @@
+name: firstflow
+on: push
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get Code
+              uses: actions/checkout@v3
+            - name: install NodeJS
+              uses: actions/setup-node@v2
+              with:
+                    node-version: '16'
+            - name: Install Dependencies
+              run: npm install        
+
